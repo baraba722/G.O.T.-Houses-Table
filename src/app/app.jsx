@@ -8,7 +8,6 @@ require("isomorphic-fetch");
 
 export default function App() {
     const [data, setData] = useState([]);
-    const [q, setQ] = useState("");
 
     useEffect(() => {
         fetch("https://anapioficeandfire.com/api/houses")
@@ -18,7 +17,6 @@ export default function App() {
 
     return (
         <div>
-            <div>filter goes here</div>
             <div>
                 <Datatable data = {data}/>
             </div>
